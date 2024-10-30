@@ -9,14 +9,14 @@ const product1 = productRepository.create({ name: 'notbook gamer', price: 8000 }
 const product2 = productRepository.create({ name: 'mouse gamer', price: 1000 });
 const product3 = productRepository.create({ name: 'monitor gamer', price: 4000 });
 
-console.log(`all products: ${productRepository.findAll()}`);
-console.log(`findUserById: ${userRepository.finOne(user1.id)}`);
+console.log(`all products: `, productRepository.findAll());
+console.log(`findUserById: `,userRepository.finOne(user1.id));
 
 userRepository.update(user1.id, { name: 'weslleyDEV', email: 'contato@weslleydev.com' });
-console.log(`all users: ${userRepository.findAll()}`);
+console.log(`all users: `, userRepository.findAll());
 
 productRepository.delete(product2.id);
 productRepository.delete(product3.id);
 productRepository.update(product1.id, { price: 2000 });
-console.log(`all products: ${productRepository.findAll()}`);
+console.log(`all products: `, productRepository.findAll());
 
